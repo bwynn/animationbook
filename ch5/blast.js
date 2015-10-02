@@ -1,4 +1,3 @@
-
 /****************
     Blast.js
 ****************/
@@ -232,7 +231,7 @@
         /* Ensure that the opts.delimiter search variable is a non-empty string. */
         if (opts.search.length && (typeof opts.search === "string" || /^\d/.test(parseFloat(opts.search)))) {
             /* Since the search is performed as a Regex (see below), we escape the string's Regex meta-characters. */
-            opts.delimiter = opts.search.toString().replace(/[-[\]{,}(.)*+?|^$\\\/]/g, "\\"\\ "\\$&"amp;"amp;");
+            opts.delimiter = opts.search.toString().replace(/[-[\]{,}(.)*+?|^$\\\/]/g, "\\$&");
 
             /* Note: This matches the apostrophe+s of the phrase's possessive form: {PHRASE's}. */
             /* Note: This will not match text that is part of a compound word (two words adjoined with a dash), e.g. "front" won't match inside "front-end". */
